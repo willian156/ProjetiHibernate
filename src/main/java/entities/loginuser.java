@@ -4,7 +4,8 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "Logins")
-public class Login {
+public class loginuser {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -12,14 +13,12 @@ public class Login {
     private String Login;
     private String senha;
     private int idade;
-    private String nascionalidade;
 
-    public Login(String nome, String login, String senha, int idade, String nascionalidade) {
+    public loginuser(String nome, String login, String senha, int idade) {
         this.nome = nome;
         Login = login;
         this.senha = senha;
         this.idade = idade;
-        this.nascionalidade = nascionalidade;
     }
 
     public Long getId() {
@@ -60,13 +59,5 @@ public class Login {
 
     public void setIdade(int idade) {
         this.idade = idade;
-    }
-
-    public String getNascionalidade() {
-        return nascionalidade;
-    }
-
-    public void setNascionalidade(String nascionalidade) {
-        this.nascionalidade = nascionalidade;
     }
 }
